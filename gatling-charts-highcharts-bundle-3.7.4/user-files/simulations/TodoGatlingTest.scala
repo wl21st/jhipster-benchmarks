@@ -47,12 +47,12 @@ class TodoGatlingTest extends Simulation {
                 .exec(http("Get all todos")
                     .get("/todo")
                     .check(status.is(200)))
-                .pause(1 seconds, 2 seconds)
+                .pause(500.milliseconds, 500.milliseconds)
         }
 
     val users = scenario("Users").exec(scn)
 
     setUp(
-        users.inject(rampUsers(Integer.getInteger("users", 500)) during (Integer.getInteger("ramp", 10) seconds))
+        users.inject(rampUsers(Integer.getInteger("users", 2000)) during (Integer.getInteger("ramp", 10) seconds))
     ).protocols(httpConf)
 }
