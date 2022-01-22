@@ -9,13 +9,20 @@
     <packaging>jar</packaging>
     <name>Webflux</name>
 
-    <repositories>
-        <repository>
-            <id>spring-milestone</id>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-        <!-- jhipster-needle-maven-repository -->
-    </repositories>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.13.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>spring-milestone</id>-->
+<!--            <url>https://repo.spring.io/milestone</url>-->
+<!--        </repository>-->
+<!--        &lt;!&ndash; jhipster-needle-maven-repository &ndash;&gt;-->
+<!--    </repositories>-->
 
     <pluginRepositories>
         <!-- jhipster-needle-maven-plugin-repository -->
@@ -44,8 +51,8 @@
         <jhipster-dependencies.version>3.6.0</jhipster-dependencies.version>
         <!-- The spring-boot version should match the one managed by
         https://mvnrepository.com/artifact/io.github.jhipster/jhipster-dependencies/${jhipster-dependencies.version} -->
-        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
-        <archunit-junit5.version>0.13.1</archunit-junit5.version>
+        <spring-boot.version>2.2.13.RELEASE</spring-boot.version>
+        <archunit-junit5.version>0.22.0</archunit-junit5.version>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
         <!-- Plugin versions -->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -120,10 +127,12 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
@@ -132,10 +141,12 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
+            <version>1.4.2.Final</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
+            <version>1.4.2.Final</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -225,16 +236,17 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
+            <version>0.11.2</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <scope>runtime</scope>
+            <version>0.11.2</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-            <scope>runtime</scope>
+            <version>0.11.2</version>
         </dependency>
         <!-- Spring Cloud -->
         <dependency>
@@ -272,6 +284,7 @@
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
+            <version>4.2.7</version>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
